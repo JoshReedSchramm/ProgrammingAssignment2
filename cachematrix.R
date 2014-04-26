@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The purpose of this file is to cache a matrix inversion or
+## recaulate that inversion on demand if needed
 
-## Write a short comment describing this function
+## makeCacheMatrix is a kind of "class" in that it has 4 functions that 
+## save both an original and an inverted matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -16,7 +17,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cache solve will take in a matrix and either calculate the inverse of that matrix, or 
+## return a previously caculated matrix inversion
 
 cacheSolve <- function(x, ...) {
   i <- x$getInverse()
